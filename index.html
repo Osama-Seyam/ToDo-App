@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap - style files -->
+    <link rel="stylesheet" href="App/Css/bootstrap.css" />
+    <link rel="stylesheet" href="App/Css/style.css" />
+    <!-- Js file -->
+    <script src="App/Js/script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- dark mode toggler -->
+    <div class="toggle-container">
+      <input type="checkbox" id="switch" name="theme" />
+      <label class="toggler" id="button" for="switch">toggle</label>
+    </div>
+    <!-- end of button -->
+
+    <!-- Task area -->
+    <div class="container-fluid text-center">
+      <button id="show" class="btn btn-primary w-20 my-5">Add Task</button>
+  </div> 
+  
+    <div class="card container col-md-6">
+        <div id="noTasks" class="card-body">
+            <div class="alert alert-danger">
+                NO Tasks Added Yet !!
+            </div>
+        </div>
+        <div id="tasks" class="card-body">
+        </div>
+    </div>
+
+    <div id="model" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+          <div id="modelCard" class="modal-content">
+              <div class="modal-header">
+                  <h5 id="task-Header" class="modal-title">Add Task</h5>
+                  <button type="button" onclick="showModel()" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="container col-md-12">
+                      <div class="card m-4">
+                          <div class="card-body">
+                              <div class="form-groub">
+                                  <label> Add Task </label>
+                                  <input id="taskdata" placeholder="Add Task" type="text" class="form-control">
+                              </div>
+                              <button id="addbtn" class="w-50 m-2 mx-auto btn-block btn btn-primary"> Add Now</button>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" id="close">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  </body>
+</html>
+</body>

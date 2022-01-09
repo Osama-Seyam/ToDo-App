@@ -1,0 +1,78 @@
+body {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.card {
+    background-color: #999;
+}
+
+.none {
+    display: none;
+}
+
+.btn {
+    padding: 3px;
+}
+
+.checked {
+    background-color: gray !important;
+    text-decoration: line-through;
+}
+
+.display {
+    display: block;
+}
+
+/* the dark mode toggler 
+   =====================*/
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.toggler {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: #999;
+    border-radius: 100px;
+    position: relative;
+    top: 5px;
+}
+
+.toggler:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+.toggler {
+    background: #333;
+}
+
+input:checked+.toggler:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.toggler:active:after {
+    width: 45px;
+}
+
+/* Dark mode
+   ========= */
+.dark {
+    background: #111;
+    color: white;
+}
